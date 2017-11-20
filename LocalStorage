@@ -1,0 +1,48 @@
+//1st page not done
+<html>
+<head>
+    <script src="script.js">
+    </script>
+</head>
+<body>
+
+  <input type="text" id="cw">
+  <button onclick="classwork()" id="classwork">wot yor nam</button>
+</body>
+</html>
+
+
+//javascript
+var names = [];
+
+function classwork(){
+  names.push(document.getElementById(cw).value);
+  document.getElementById('cw').value = "";
+}
+function classdone(){
+   localStorage.setItem('list',names);
+   location.href="one.html";
+}
+
+function show(){
+  var x = localStorage.getItem('list');
+  document.getElementById('showALL').innerHTML = x;
+}
+
+
+
+
+//2nd page
+<html>
+<head>
+    <script src="script.js">
+    </script>
+</head>
+<body>
+
+  <input type="text" id="cw">
+  <input type="text" id="list">
+  <button onclick="classwork()" id="classwork">wot yor nam</button>\
+  <button onclick="classdone()" id="list">wot r nam</button>
+</body>
+</html>
